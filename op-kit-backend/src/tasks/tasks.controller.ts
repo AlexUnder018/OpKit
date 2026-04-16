@@ -20,7 +20,7 @@ export class TasksController {
   constructor(private tasksService: TasksService) {}
 
   @Get()
-  async getAllTasks(@GetUser('id') userId: number) {
+  async getAllTasks(@GetUser('userId') userId: number) {
     return this.tasksService.getAllTasks(userId);
   }
 
